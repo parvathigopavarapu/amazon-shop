@@ -1,0 +1,34 @@
+<ion-header>
+    <header-main [title]='title'></header-main>
+</ion-header>
+
+<ion-content>
+    <ion-list no-padding no-margin>
+        <ion-row class="header2" no-padding no-margin>
+            <ion-col col-4 no-padding no-margin>Day</ion-col>
+            <ion-col col-4 no-margin no-padding>Open</ion-col>
+            <ion-col col-4 no-margin no-padding>Close </ion-col>
+        </ion-row>
+        <ion-item-sliding *ngFor="let item of openingHours;let index=index; let odd=odd; let even=even;" style="text-align:center">
+            <ion-item [ngClass]="{ odd: odd, even: even } " no-lines no-padding no-margin>
+                <ion-row no-padding no-margin>
+                    <ion-col col-4> {{item.dayOfWeek}}</ion-col>
+                    <ion-col col-4 no-margin no-padding> {{item.opens}}</ion-col>
+                    <ion-col col-4 no-margin no-padding> {{item.closes}}</ion-col>
+                </ion-row>
+            </ion-item>
+            <ion-item-options>
+                <button class="sliding_btn" ion-button (click)="edit(item._id)" [ngClass]="{ odd: odd, even: even }"><ion-icon name="create" class="icon-small" ></ion-icon>
+                 EDIT 
+                </button>
+                <button class="sliding_btn" ion-button (click)="delete(item._id)" [ngClass]="{ odd: odd, even: even }"><ion-icon name="trash" class="icon-small" ></ion-icon>
+                 DELETE
+                </button>
+            </ion-item-options>
+        </ion-item-sliding>
+    </ion-list>
+
+    <div class="button-add" (click)="add()" bottom right>
+        <ion-icon name="add" class="icon-add" style="padding-left: 16px!important;padding-top: 10px!important"></ion-icon>
+    </div>
+</ion-content>

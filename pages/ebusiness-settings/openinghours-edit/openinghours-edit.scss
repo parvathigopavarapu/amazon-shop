@@ -1,0 +1,29 @@
+page-openinghours-edit {
+  .label-md {
+    font-weight: bold;
+    margin: 0px !important
+  }
+  .label-ios {
+    font-weight: bold;
+    margin: 0px !important
+  }
+  .div2 {
+    margin-top: 10%;
+    margin-left: 76%;
+    width: 55px;
+    height: 55px;
+    position: fixed;
+    border-radius: 100%;
+    background: map-get($colors, primary);
+  }
+  .icon2 {
+    color: map-get($colors, primary);
+    padding-left: 16px;
+    padding-top: 10px;
+    font-size: 35px;
+  }
+  .label-a {
+    color: map-get($colors, primary) !important;
+    margin: 0px !important;
+  }
+}

@@ -1,0 +1,14 @@
+page-home-index {
+  .label-md {
+    margin: 0px !important;
+  }
+  .label-ios {
+    margin: 0px !important;
+  }
+  .label-wp {
+    margin: 0px !important;
+  }
+  ion-card ion-item:hover {
+    background-color: map-get($colors, dark-x) !important;
+  }
+}

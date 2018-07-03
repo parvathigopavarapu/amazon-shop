@@ -1,0 +1,18 @@
+page-business-settings {
+  .label-a {
+    color: map-get($colors, primary);
+    font-weight: normal;
+  }
+  .icon {
+    font-size: 30px;
+  }
+  .label-md {
+    margin: 5px !important;
+  }
+  .label-wp {
+    margin: 5px !important;
+  }
+  .label-ios {
+    margin: 5px !important;
+  }
+}

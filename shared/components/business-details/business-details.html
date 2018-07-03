@@ -1,0 +1,151 @@
+<ion-row no-margin no-padding>
+    <ion-col col-1></ion-col>
+    <ion-col col-1 no-margin no-padding no-margin>
+        <ion-icon name="podium" no-margin no-padding></ion-icon>
+    </ion-col>
+    <ion-col no-margin no-padding>
+        <ion-label margin-left margin-top no-margin no-padding class="label-a medium">
+            {{business.tradingName}}
+        </ion-label>
+    </ion-col>
+</ion-row>
+
+<ion-row no-margin no-padding>
+    <ion-col col-1 no-paddding no-margin></ion-col>
+    <ion-col col-1 no-margin no-padding>
+        <ion-icon name="call" no-margin no-padding></ion-icon>
+    </ion-col>
+    <ion-col no-padding>
+        <ion-label no-margin margin-left class="label-a x-small">Phone</ion-label>
+    </ion-col>
+</ion-row>
+
+<ion-row no-margin no-padding>
+    <ion-col col-1></ion-col>
+    <ion-col col-1> </ion-col>
+    <ion-col no-margin no-padding>
+        <ion-label no-margin margin-left class="x-small">{{business.phone}}</ion-label>
+    </ion-col>
+</ion-row>
+
+<ion-row no-margin no-padding>
+    <ion-col col-1 no-paddding no-margin></ion-col>
+    <ion-col col-1 no-margin no-padding>
+        <ion-icon name="mail" no-margin no-padding></ion-icon>
+    </ion-col>
+    <ion-col no-padding>
+        <ion-label no-margin margin-left class="label-a small">Email</ion-label>
+    </ion-col>
+</ion-row>
+
+<ion-row no-margin no-padding>
+    <ion-col col-1></ion-col>
+    <ion-col col-1></ion-col>
+    <ion-col no-margin no-padding>
+        <ion-label no-margin margin-left no-margin no-padding class="x-small">{{business.email}}</ion-label>
+    </ion-col>
+</ion-row>
+
+<ion-row no-margin no-padding>
+    <ion-col col-1 no-paddding no-margin></ion-col>
+    <ion-col col-1 no-margin no-padding>
+        <ion-icon name="md-bookmark" no-margin no-padding></ion-icon>
+    </ion-col>
+    <ion-col no-padding>
+        <ion-label no-margin margin-left class="label-a small">License Number</ion-label>
+    </ion-col>
+</ion-row>
+
+<ion-row no-margin no-padding>
+    <ion-col col-1></ion-col>
+    <ion-col col-1> </ion-col>
+    <ion-col no-margin no-padding>
+        <ion-label no-margin margin-left class="x-small">{{business.licenseNo}}</ion-label>
+    </ion-col>
+</ion-row>
+
+<ion-row no-margin no-padding>
+    <ion-col col-1 no-paddding no-margin></ion-col>
+    <ion-col col-1 no-margin no-padding>
+        <ion-icon name="book" no-margin no-padding></ion-icon>
+    </ion-col>
+    <ion-col no-padding>
+        <ion-label no-margin margin-left class="label-a small">Description</ion-label>
+    </ion-col>
+</ion-row>
+
+<ion-row no-margin no-padding>
+    <ion-col col-1></ion-col>
+    <ion-col col-1> </ion-col>
+    <ion-col no-margin no-padding>
+        <ion-label class="x-small" margin-left margin-right text-wrap>{{business.description}}</ion-label>
+    </ion-col>
+</ion-row>
+
+<ion-row no-margin no-padding>
+    <ion-col col-1 no-paddding no-margin></ion-col>
+    <ion-col col-1 no-margin no-padding>
+        <ion-icon name="locate" no-margin no-padding></ion-icon>
+    </ion-col>
+    <ion-col no-padding>
+        <ion-label no-margin margin-left class="label-a small">Address</ion-label>
+    </ion-col>
+</ion-row>
+
+<ion-row no-margin no-padding>
+    <ion-col col-1 no-margin no-padding></ion-col>
+    <ion-col col-1 no-margin no-padding></ion-col>
+    <ion-col no-margin no-padding>
+        <ion-label no-margin margin-left class="x-small" text-wrap>{{business.address?.addressName}}, {{business.address?.address}}, {{business.address?.area}},
+            {{business.address?.city}}, {{business.address?.state}}, {{business.address?.country}}, {{business.address?.pincode}}
+        </ion-label>
+    </ion-col>
+</ion-row>
+
+<!--<ion-row no-margin no-padding>
+    <ion-col col-1 no-margin no-padding></ion-col>
+    <ion-col col-1 no-margin no-padding></ion-col>
+    <ion-col no-margin no-padding>
+        <ion-label no-margin margin-left class="small">{{business.address?.address}}</ion-label>
+    </ion-col>
+</ion-row>
+
+<ion-row no-margin no-padding>
+    <ion-col col-1 no-margin no-padding></ion-col>
+    <ion-col col-1 no-margin no-padding></ion-col>
+    <ion-col no-margin no-padding>
+        <ion-label no-margin margin-left class="small">{{business.address?.area}}</ion-label>
+    </ion-col>
+</ion-row>
+
+<ion-row no-margin no-padding>
+    <ion-col col-1 no-margin no-padding></ion-col>
+    <ion-col col-1 no-margin no-padding></ion-col>
+    <ion-col no-margin no-padding>
+        <ion-label no-margin margin-left class="small">{{business.address?.city}}</ion-label>
+    </ion-col>
+</ion-row>
+
+<ion-row no-margin no-padding>
+    <ion-col col-1 no-margin no-padding></ion-col>
+    <ion-col col-1 no-margin no-padding></ion-col>
+    <ion-col no-margin no-padding>
+        <ion-label no-margin margin-left class="small">{{business.address?.state}}</ion-label>
+    </ion-col>
+</ion-row>
+
+<ion-row no-margin no-padding>
+    <ion-col col-1 no-margin no-padding></ion-col>
+    <ion-col col-1 no-margin no-padding></ion-col>
+    <ion-col no-margin no-padding>
+        <ion-label no-margin margin-left class="small">{{business.address?.country}}</ion-label>
+    </ion-col>
+</ion-row>
+
+<ion-row no-margin no-padding>
+    <ion-col col-1 no-margin no-padding></ion-col>
+    <ion-col col-1 no-margin no-padding></ion-col>
+    <ion-col no-margin no-padding>
+        <ion-label no-margin margin-left class="small">{{business.address?.pincode}}</ion-label>
+    </ion-col>
+</ion-row>-->

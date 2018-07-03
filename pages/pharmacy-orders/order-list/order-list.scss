@@ -1,0 +1,35 @@
+page-order-list {
+  .label-md {
+    margin: 0px !important;
+  }
+  .label-ios {
+    margin: 0px !important;
+  }
+  .col {
+    padding: 3px !important;
+    height: 25px;
+    align-items: center;
+    align-content: center;
+  }
+  .status {
+    background-color: #ff8353;
+    color: map-get($colors, white-a);
+  }
+  .border {
+    padding-left: 6px;
+    padding-right: 6px;
+    text-align: center;
+    border-radius: 6px;
+  }
+  ion-card:hover {
+    background-color: map-get($colors, dark-x) !important;
+  }
+}
+
+ion-app.md [padding-bottom] {
+  padding-bottom: 8px;
+}
+
+ion-app.md [padding-top] {
+  padding-top: 8px;
+}

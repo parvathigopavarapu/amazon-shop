@@ -1,0 +1,26 @@
+page-account-index {
+  .button-md {
+    margin: 10px !important;
+    width: calc(100% - 20px) !important;
+  }
+  .button-ios {
+    margin: 10px !important;
+    width: calc(100% - 20px) !important;
+  }
+  .button-wp {
+    margin: 10px !important;
+    width: calc(100% - 20px) !important;
+  }
+  .label-md {
+    margin: 0px !important;
+  }
+  .label-ios {
+    margin: 0px !important;
+  }
+  .label-wp {
+    margin: 0px !important;
+  }
+  ion-card ion-item:hover {
+    background-color: map-get($colors, dark-x) !important;
+  }
+}

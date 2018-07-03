@@ -1,0 +1,20 @@
+page-order-details-new {
+  .image {
+    width: 50px;
+    height: 50px
+  }
+  .scroll-content {
+    overflow-y: visible;
+    margin-top: 56px !important;
+    margin-bottom: 50px !important;
+  }
+  .icon {
+    color: map-get($colors, primary);
+    font-size: 30px;
+    margin: 0px;
+    padding: 0px;
+  }
+  .select {
+    margin: 0px !important;
+  }
+}

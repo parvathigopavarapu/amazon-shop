@@ -1,0 +1,19 @@
+page-deliveryzones-add {
+  ion-input {
+    border: none;
+  }
+}
+
+.item-md.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner,
+.item-md.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner {
+  border-bottom-color: map-get($colors, light-gray)important;
+  -webkit-box-shadow: none;
+  box-shadow: none
+}
+
+.item-ios.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner,
+.item-md.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner {
+  border-bottom-color: map-get($colors, light-gray) !important;
+  -webkit-box-shadow: none;
+  box-shadow: none
+}

@@ -1,0 +1,245 @@
+<ion-header>
+  <header-main [title]='title'></header-main>
+</ion-header>
+<ion-content no-margin no-padding class="color">
+
+  <div class="devider" style="padding-top:3%">Order Number: {{order?.id}}</div>
+  <ion-card (click)="toggleDetails(data1)" data-toggle="collapse" padding-left padding-right>
+    <ion-row class="medium">
+      <ion-col col-10> Prescription Details </ion-col>
+      <ion-col>
+        <ion-icon *ngIf="data1.showDetails != true" name="ios-arrow-forward"></ion-icon>
+        <ion-icon *ngIf="data1.showDetails == true" name="ios-arrow-down"></ion-icon>
+      </ion-col>
+    </ion-row>
+    <div *ngIf="data1.showDetails" class="x-small">
+      <hr>
+      <ion-row padding-top>
+        <ion-col col-5 no-padding>
+          <b>Patient Name</b>
+        </ion-col>
+        <ion-col col-1>:</ion-col>
+        <ion-col col-6>{{order.contact.patient.patientName}}</ion-col>
+      </ion-row>
+      <ion-row padding-top>
+        <ion-col col-5 no-padding>
+          <b>Prescriptions</b>
+        </ion-col>
+        <ion-col col-1>:</ion-col>
+        <ion-col col-3 *ngFor="let item of order.prescriptions">
+          <img src={ {item.prescriptionImageUrl}} style="height:50px;width:60px" alt="image" class="image" />
+        </ion-col>
+      </ion-row>
+
+      <ion-row text-wrap padding-top>
+        <ion-col col-1 no-padding>
+          <ion-icon name="radio-button-on" style="margin-top:-100%;font-size:20px;"></ion-icon>
+        </ion-col>
+        <ion-col no-padding> will inform when he calls to confirm my order</ion-col>
+      </ion-row>
+      <ion-row text-wrap padding-top>
+        <div>
+          <b>Notes:</b> {{order.orderNotes}}</div>
+      </ion-row>
+
+      <ion-row padding-top>
+        <ion-col no-padding>
+          <b>Delivery address:</b>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col no-padding>{{order.contact.contactName}}, {{order.deliveryAddress.area}}, {{order.deliveryAddress.city}}, {{order.deliveryAddress.pincode}},
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col padding-bottom>Mobile No:{{order.contact.phoneNumber}}.</ion-col>
+      </ion-row>
+    </div>
+  </ion-card>
+
+  <ion-card (click)="toggleDetails1(data2)" data-toggle="collapse" padding-left padding-right>
+    <ion-row class="medium">
+      <ion-col col-10> Quotation Details </ion-col>
+      <ion-col>
+        <ion-icon class="icon2" *ngIf="data2.showDetails != true" name="ios-arrow-forward"></ion-icon>
+        <ion-icon class="icon2" *ngIf="data2.showDetails == true" name="ios-arrow-down"></ion-icon>
+      </ion-col>
+    </ion-row>
+    <div *ngIf="data2.showDetails" class="x-small">
+      <hr>
+      <div style="background-color:#f5f5f5;width:100%;margin-left:3px" no-padding no-margin>
+        <ion-row>
+          <ion-col col-2>
+            <ion-icon name="paper"></ion-icon>
+          </ion-col>
+          <ion-col>
+            <b>Quotation</b>
+          </ion-col>
+        </ion-row>
+        <div>
+          <ion-row *ngFor="let item of order.quotes">
+            <ion-col col-2></ion-col>
+            <ion-col col-3>
+              <img src={ {item.quoteImageUrl}} style="height:50px;width:60px" alt=" image" class="image" />
+            </ion-col>
+            <ion-col col-4></ion-col>
+            <ion-col col-3>
+              <div>Rs.{{item.quoteTotal}}/-</div>
+            </ion-col>
+          </ion-row>
+        </div>
+      </div>
+      <div class="div-a" margin-bottom>
+        <ion-row>
+          <ion-col col-2>
+            <ion-icon name="home"></ion-icon>
+          </ion-col>
+          <ion-col>
+            <b> Store Details</b>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-2></ion-col>
+          <ion-col no-padding>
+            <b>Store name and address:</b>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-2></ion-col>
+          <ion-col no-padding>Ganesh Medical Store</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-2></ion-col>
+          <ion-col no-padding>Jaya Nagar</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-2></ion-col>
+          <ion-col no-padding>Bangalore 509934</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-2></ion-col>
+          <ion-col no-padding>
+            <b>Pharmacist Name(Licence Number)</b>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-2></ion-col>
+          <ion-col no-padding>Ganesha(KNK201711)</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-2></ion-col>
+          <ion-col no-padding>
+            <b>Delivery Boy Name</b>
+          </ion-col>
+        </ion-row>
+        <ion-row padding-bottom>
+          <ion-col col-2></ion-col>
+          <ion-col>not yet assigned</ion-col>
+        </ion-row>
+      </div>
+    </div>
+  </ion-card>
+  <div padding class="text">
+    <ion-row class="x-small">
+      <ion-col col-6>
+        <div> Delivered Charges:</div>
+      </ion-col>
+      <ion-col no-padding no-margin>
+        <ion-label no-padding no-margin> Rs.{{order.orderDeliveryCharge}}/-</ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row class="x-small">
+      <ion-col col-6>
+        <div> Discount Offered:</div>
+      </ion-col>
+      <ion-col no-padding no-margin>
+        <ion-label no-padding no-margin> Rs.{{order.quoteDiscount}}/-</ion-label>
+      </ion-col>
+    </ion-row>
+    <hr>
+    <ion-row class="x-small">
+      <ion-col col-6 no-padding no-margin>
+        <div>
+          <b>Total Order Value:</b>
+        </div>
+      </ion-col>
+      <ion-col no-padding no-margin>
+        <ion-label no-padding no-margin> Rs.{{order.orderTotal}}/-</ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row no-padding no-margin class="x-small">
+      <ion-col col-6>
+        <div>
+          <b>Payment Mode:</b>
+        </div>
+      </ion-col>
+      <ion-col no-padding no-margin>
+        <ion-label no-padding no-margin> Online</ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row class="x-small">
+      <ion-col col-6 no-padding no-margin>
+        <div>
+          <b>Balance :</b>
+        </div>
+      </ion-col>
+      <ion-col margin-left no-padding no-margin>
+        <ion-label no-padding no-margin> Rs.0/-</ion-label>
+      </ion-col>
+    </ion-row>
+  </div>
+  <div no-padding margin-left>
+    <ion-row class="x-small">
+      <ion-col margin-left>
+        <b> Approx. Delivery Day and Time</b>
+      </ion-col>
+    </ion-row>
+    <ion-row no-padding no-margin class="x-small">
+      <ion-col no-padding>
+        <ion-label no-padding no-margin>Today Around 11:00PM</ion-label>
+      </ion-col>
+    </ion-row>
+  </div>
+  <div padding>
+    <ion-row>
+      <ion-col col-7>
+        <b> Order Status:</b>
+      </ion-col>
+      <ion-col style="color:#ff4400">
+        <b>{{orderStatus}}</b>
+      </ion-col>
+    </ion-row>
+  </div>
+  <ion-row margin-top *ngIf="orderStatus == 'confirmed'">
+    <button ion-button class="button-center" (click)="gotoOrderList(orderStatus)">Prepared</button>
+  </ion-row>
+
+  <ion-row *ngIf="orderStatus == 'prepared'" padding-bottom>
+    <button ion-button class="button-half" (click)="gotoOrderList(orderStatus)">Unprepared</button>
+    <button ion-button class="button-half" (click)="gotoOrderList(orderStatus)">Out For Delivery</button>
+  </ion-row>
+  <ion-row *ngIf="orderStatus == 'outForDelivery'" padding-bottom>
+    <ion-col margin-bottom>
+      <button ion-button class="button-small" (click)="gotoOrderList(orderStatus)">Not sent</button>
+    </ion-col>
+    <ion-col margin-bottom>
+      <button ion-button class="button-small" (click)="gotoOrderList(orderStatus)">Deliver</button>
+    </ion-col>
+    <ion-col margin-bottom>
+      <button ion-button class="button-small" (click)="gotoOrderList(orderStatus)">Locate</button>
+    </ion-col>
+  </ion-row>
+  <ion-row *ngIf="orderStatus == 'delivered'" padding-bottom>
+    <ion-col>
+      <button ion-button class="button-half" (click)="gotoOrderList(orderStatus)">Undeliver</button>
+      <button ion-button class="button-half" (click)="gotoOrderList(orderStatus)">Delivered</button>
+    </ion-col>
+  </ion-row>
+  <ion-row *ngIf="orderStatus == 'rejected'" padding-bottom>
+    <ion-col>
+      <button ion-button class="button-center" (click)="gotoOrderList(orderStatus)">Undo</button>
+    </ion-col>
+  </ion-row>
+
+</ion-content>

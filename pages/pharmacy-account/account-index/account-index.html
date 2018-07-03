@@ -1,0 +1,13 @@
+<ion-header>
+    <header-main [title]='title'></header-main>
+</ion-header>
+
+<ion-content>
+    <header-sub [profile]="profile" [business] = 'business'></header-sub>
+    <pharmacy-navigation-top [navList]='profileList'></pharmacy-navigation-top>
+
+    <ion-footer no-lines no-border>
+        <button ion-button class="button-full" (click)="selectPharmacy()" margin-top style="background:#999999">Change Pharmacy</button>
+        <button ion-button class="button-full" (click)="signOut()">Log Out</button>
+    </ion-footer>
+</ion-content>

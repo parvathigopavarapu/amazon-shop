@@ -1,0 +1,15 @@
+page-verifyphone{
+    .scroll-content{
+        overflow: hidden;
+    }
+    .button-none{
+        background:none!important;
+        color: map-get($colors,primary)!important;
+        font-weight: bold;
+        box-shadow: none;
+        text-transform: none;
+        margin-top:-3px;
+        padding:0px;
+    }
+ 
+}

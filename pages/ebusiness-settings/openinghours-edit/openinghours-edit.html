@@ -1,0 +1,31 @@
+<ion-header>
+    <header-main [title]='title'></header-main>
+</ion-header>
+
+<ion-content>
+    <ion-item class="subTitle" no-lines no-padding no-margin><b class="label-a" no-padding>{{openingHours.dayOfWeek}}</b></ion-item>
+    <ion-item style="background: none;border-bottom:1px solid #006600" no-lines>
+        <ion-row>
+            <ion-col padding-left>Open</ion-col>
+            <ion-col padding-left> Close</ion-col>
+        </ion-row>
+    </ion-item>
+
+    <ion-row padding-left margin-top>
+        <ion-col no-margin no-padding>
+            <ion-item no-padding no-lines style="background: none">
+                <ion-datetime displayFormat="HH:mm " pickerFormat="HH mm " placeholder="08:00" [(ngModel)]="openingHours.opens"></ion-datetime>
+            </ion-item>
+        </ion-col>
+        <ion-col no-margin no-padding>
+            <ion-item no-padding no-lines style="background: none">
+                <ion-datetime displayFormat="HH:mm " pickerFormat="HH mm " placeholder="13:00" [(ngModel)]="openingHours.closes"></ion-datetime>
+            </ion-item>
+        </ion-col>
+    </ion-row>
+    
+    <ion-footer no-border>
+        <button ion-button (click)="update()" class="button-half">UPDATE</button>
+        <button ion-button (click)="dismiss()" class="button-half">CANCEL</button>
+    </ion-footer>
+</ion-content>

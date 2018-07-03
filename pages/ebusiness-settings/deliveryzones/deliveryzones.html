@@ -1,0 +1,43 @@
+<ion-header>
+  <header-main [title]='title'></header-main>
+</ion-header>
+
+<ion-content no-padding no-margin>
+  <ion-grid no-padding no-margin>
+    <ion-row class="header2" no-padding no-margin>
+      <ion-col>Zone</ion-col>
+      <ion-col>Area</ion-col>
+      <ion-col>Minimum Order Value </ion-col>
+      <ion-col>Deliver Charge(inRs)</ion-col>
+      <ion-col> Free Delivery Above</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-list border-bottom="none" no-padding no-margin>
+    <ion-item-sliding *ngFor="let item of deliveryZones;let odd=odd;let even=even;" no-padding no-margin>
+      <ion-item [ngClass]="{ odd: odd, even: even }" text-wrap no-lines no-padding no-margin>
+        <ion-row no-padding no-margin>
+          <ion-col no-padding no-margin class="x-small">{{item.zone}}</ion-col>
+          <ion-col class="x-small">{{item.area}}</ion-col>
+          <ion-col class="x-small">{{item.minOrder}}</ion-col>
+          <ion-col class="x-small">{{item.deliveryCharge}}</ion-col>
+          <ion-col class="x-small">{{item.freeDeliveryOrder}}</ion-col>
+        </ion-row>
+      </ion-item>
+      <ion-item-options>
+        <button class="sliding_btn" (click)="edit(item._id)" ion-button [ngClass]="{ odd: odd, even: even }">
+          <ion-icon name="create" class="icon-small"></ion-icon>
+          EDIT
+        </button>
+        <button class="sliding_btn" (click)="delete(item._id)" ion-button [ngClass]="{ odd: odd, even: even }">
+          <ion-icon name="trash" class="icon-small"></ion-icon>
+          DELETE
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+    <div class="button-add" (click)="add()" bottom right>
+      <ion-icon name="add" class="icon-add" style="padding-left: 16px!important;padding-top: 10px!important"></ion-icon>
+    </div>
+</ion-content>

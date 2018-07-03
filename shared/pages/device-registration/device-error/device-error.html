@@ -1,0 +1,17 @@
+<ion-header>
+    <header-main [title]='title'></header-main>
+</ion-header>
+
+<ion-content>
+    <p style="font-size:18px;text-align:center">{{subTitle}}</p>
+    <ion-card style="font-size:18px;text-align:center">
+        <p class="large wrap">{{message}}</p>
+    </ion-card>
+    <ion-card *ngIf="response">
+        <ion-label class="medium wrap">{{response}}</ion-label>
+    </ion-card>
+</ion-content>
+
+<ion-footer no-border no-padding no-margin>
+    <button ion-button class="button-footer" (click)="next()">Retry</button>
+</ion-footer>

@@ -1,0 +1,78 @@
+<ion-header>
+  <header-main [title]='title'></header-main>
+</ion-header>
+
+<ion-content>
+  <ion-card padding-left padding-bottom margin-bottom>
+    <ion-row>
+      <ion-col col-6 class="large black">
+        <b>{{order.contact.contactName}}</b>
+      </ion-col>
+      <ion-col col-6 class="medium black">
+        <ion-icon name="call" class="icon-small"></ion-icon>{{order.contact.phoneNumber}}
+      </ion-col>
+    </ion-row>
+    <div>
+      <ion-row padding-top>
+        <ion-col col-5 class="x-small light">
+          <b>Patient Name</b>
+        </ion-col>
+        <ion-col col-1>:</ion-col>
+        <ion-col col-6 class="x-small light">{{order.contact.patient.patientName}}</ion-col>
+      </ion-row>
+      <ion-row padding-top>
+        <ion-col col-5 class="x-small light">
+          <b>Prescriptions</b>
+        </ion-col>
+        <ion-col col-1>:</ion-col>
+        <ion-col col-3 *ngFor="let image of order.prescriptions">
+          <img src="{{image.prescriptionImageUrl}}" style="height:50px;width:60px">
+        </ion-col>
+      </ion-row>
+    </div>
+    <ion-row text-wrap>
+      <ion-col col-1>
+        <ion-radio value="order"></ion-radio>
+      </ion-col>
+      <ion-col padding-top class="x-small light"> will inform when he calls to confirm my order</ion-col>
+    </ion-row>
+    <ion-row text-wrap padding-top margin-bottom>
+      <div class="x-small light">
+        <b>Notes:</b> {{order.orderNotes}}</div>
+    </ion-row>
+    <ion-row *ngIf="order.orderStatus != 'rejected'">
+      <ion-col col-2></ion-col>
+      <ion-col col-8>
+        <button ion-button class="button-small">
+          <ion-icon name="call" class="icon-white" no-padding no-margin></ion-icon>Call Customer</button>
+      </ion-col>
+      <ion-col col-2></ion-col>
+    </ion-row>
+    <ion-row margin-top>
+      <ion-col no-padding class="small light">
+        <b>Delivery address:</b>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col no-padding class="x-small light">{{order.contact.contactName}},</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col no-padding class="x-small light">{{order.deliveryAddress.area}},</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col no-padding class="x-small light">{{order.deliveryAddress.city}}-{{order.deliveryAddress.pincode}},</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col no-padding class="x-small light">Mobile No:{{order.contact.phoneNumber}}.</ion-col>
+    </ion-row>
+  </ion-card>
+  <button ion-button (click)="uploadquatation()" class="button-half">Upload Quotation</button>
+  <button ion-button (click)="createQuote()" class="button-half">Create Quotation</button>
+  <ion-row>
+    <ion-col col-2></ion-col>
+    <ion-col col-8>
+      <button ion-button class="button-small" style="background:#ff8040">Reject</button>
+    </ion-col>
+    <ion-col col-2></ion-col>
+  </ion-row>
+</ion-content>

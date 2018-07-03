@@ -1,0 +1,11 @@
+<ion-header>
+    <header-main [title]='title' [logo]='logo'></header-main>
+</ion-header>
+
+<ion-content>
+    <header-sub [profile]='profile' [business]="business"></header-sub>
+    <pharmacy-navigation-top [navList]='navList'></pharmacy-navigation-top>
+    <div class="button-add" (click)="gotoChatPage()" bottom right>
+        <ion-icon name="chatboxes" class="icon-add" style="padding-left: 14px!important;padding-top: 12px!important"></ion-icon>
+    </div>
+</ion-content>

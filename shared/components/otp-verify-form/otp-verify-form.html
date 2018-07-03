@@ -1,0 +1,25 @@
+<ion-label *ngIf="verify != 'aadhar'" style="font-size:18px;text-align:center" text-wrap> The mobile number you have entered is
+    <b>{{countryCode}} - {{phoneNumber}}</b>
+</ion-label>
+
+<ion-label *ngIf="verify == 'aadhar'" style="font-size:18px;text-align:center" text-wrap> The Aadhar number you have entered is
+    <b>1234-9658-8963</b>
+</ion-label>
+
+<ion-row margin-bottom>
+    <ion-label class="x-small">Want to edit the number?
+        <button ion-button class="button-none x-small" (click)="gotoDeviceRegister()">Click Here!</button>
+    </ion-label>
+</ion-row>
+
+<ion-card>
+    <ion-label>Enter OTP:</ion-label>
+    <ion-input type="number" placeholder="OTP" [(ngModel)]="otp"></ion-input>
+    <p margin-bottom margin-left class="x-small light"><i>Enter OTP that we have sent to your mobile number</i></p>
+</ion-card>
+
+<ion-card>
+    <ion-label class="x-small wrap">
+        {{response}}
+    </ion-label>
+</ion-card>

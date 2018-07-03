@@ -1,0 +1,48 @@
+<ion-header>
+    <header-main [title]='title'></header-main>
+</ion-header>
+
+<ion-content>
+    <ion-card padding>
+        <ion-label class="medium"><b>Asha</b></ion-label>
+        <div *ngFor="let image of quoteImage let j= index ">
+            <ion-row no-padding no-margin *ngIf="j <= i">
+                <ion-col col-5 no-padding margin-top>
+                    <ion-row>
+                        <ion-img style="width: 60%; height: 60px;" src="../../../assets/imgs/{{image}}.jpg " (click)="viewImage(j)" no-padding no-margin></ion-img>
+                        <button ion-button padding-right no-margin class="button1"><ion-icon name="close" class = "icon-white" (click)= "removeImage(i)" ></ion-icon></button>
+                    </ion-row>
+                </ion-col>
+                <ion-col>
+                    <ion-label class="x-small">Quote Value inc.Tax:</ion-label>
+                    <ion-row>
+                        <ion-input type="number" placeholder="Enter quote value" [(ngModel)]="quotePrice[j]" (input)="valChange($event.target.value, j)"
+                            required></ion-input>
+                    </ion-row>
+                    <div *ngIf="quotePrice[j] == null && error == true" style="color:#ff3300">Please fill the field !</div>
+                </ion-col>
+            </ion-row>
+        </div>
+        <ion-row no-padding no-margin>
+            <ion-col col-5 no-padding no-margin>
+                <button ion-button class="div_cls" (click)="gotoUploadImagePage()" no-margin>
+                    <button ion-button  ><ion-icon name="add" class = "icon-white"></ion-icon></button>
+                </button>
+            </ion-col>
+        </ion-row>
+    </ion-card>
+    <div>
+        <ion-row no-padding no-margin>
+            <ion-col no-padding no-margin>
+                <ion-label class="x-small">Delivery Charge:</ion-label>
+                <ion-input type="number" placeholder="Enter Delivery charge" [(ngModel)]="orderDeliveryCharge" required></ion-input>
+                <ion-label class="x-small">Discount:</ion-label>
+                <ion-input type="number" placeholder="Enter Discount value" [(ngModel)]="quoteDiscount" required></ion-input>
+            </ion-col>
+        </ion-row>
+    </div>
+</ion-content>
+
+<ion-footer no-padding no-border>
+    <button ion-button block (click)="movetoquatationdetailspage()" class="next"><b>Next</b></button>
+</ion-footer>

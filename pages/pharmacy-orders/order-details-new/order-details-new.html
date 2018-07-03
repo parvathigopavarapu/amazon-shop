@@ -1,0 +1,160 @@
+<ion-header>
+  <header-main [title]='title'></header-main>
+</ion-header>
+
+<ion-content>
+  <div class="devider">Order Number: 011</div>
+  <ion-card padding-bottom class="x-small">
+    <ion-row>
+      <ion-col margin-left>
+        <b class="medium black">Asha</b>
+      </ion-col>
+    </ion-row>
+    <ion-row no-padding>
+      <ion-col col-2>
+        <ion-icon name="paper" margin-left></ion-icon>
+      </ion-col>
+      <ion-col no-padding class="medium light">
+        <b>Prescriptions</b>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-2></ion-col>
+      <ion-col col-3>
+        <img src="../../../assets/imgs/pre.jpg" class="image">
+      </ion-col>
+      <ion-col col-3>
+        <img src="../../../assets/imgs/pre2.jpg" class="image">
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+  <ion-card class="x-small">
+    <ion-row no-padding>
+      <ion-col col-2>
+        <ion-icon name="logo-euro" margin-left></ion-icon>
+      </ion-col>
+      <ion-col no-padding>
+        <b class="medium light">Quotation</b>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngFor="let item of array">
+      <ion-col col-2></ion-col>
+      <ion-col col-3>
+        <img src="../../../assets/imgs/{{item.image}}.jpg" style="height:50px;width:60px" />
+      </ion-col>
+      <ion-col col-4></ion-col>
+      <ion-col col-3>Rs.{{item.quotePrice}}/-</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-2></ion-col>
+      <ion-col col-5>
+        <div style="margin:0px;padding-top:0px" class="x-small light">Delivered Charges: </div>
+      </ion-col>
+      <ion-col col-3>
+        <div style="margin:0px;padding-top:0px" class="x-small light">Rs.100/-</div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-2></ion-col>
+      <ion-col col-5>
+        <div style="margin:0px" class="x-small light">Discount Offered: </div>
+      </ion-col>
+      <ion-col col-3>
+        <div style="margin:0px" class="x-small light">Rs.{{quoteDiscount}}/-</div>
+      </ion-col>
+    </ion-row>
+    <hr>
+    <ion-row>
+      <ion-col col-2></ion-col>
+      <ion-col col-5 padding-bottom>
+        <div no-margin class="x-small light">
+          <b>Total Order Value:</b>
+        </div>
+      </ion-col>
+      <ion-col col-3 padding-bottom>
+        <div no-margin class="x-small light">Rs.{{quoteTotal}}/-</div>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+  <ion-card class="x-small">
+    <ion-row no-padding>
+      <ion-col col-2>
+        <ion-icon name="bicycle" margin-left></ion-icon>
+      </ion-col>
+      <ion-col no-padding class="medium light">
+        <b>Approx. Delivery Day and Time</b>
+      </ion-col>
+    </ion-row>
+    <ion-row padding-bottom no-margin>
+      <ion-col col-2 no-padding> </ion-col>
+      <ion-col col-5>
+
+        <ion-select [(ngModel)]="day" placeholder="choose day" interface="action-sheet" class="x-small light">
+          <ion-option value="Today">Today</ion-option>
+          <ion-option value="Tomorrow">Tomorrow</ion-option>
+          <ion-option value="Day After Tomorrow">"Day After Tomorrow</ion-option>
+        </ion-select>
+      </ion-col>
+      <ion-col col-5 padding-right>
+        <ion-select [(ngModel)]="time" placeholder="choose time" interface="action-sheet" class="x-small light">
+          <ion-option value="11:00PM">11:00PM</ion-option>
+          <ion-option value="12:00PM">12:00PM</ion-option>
+          <ion-option value="5:00PM">5:00PM</ion-option>
+        </ion-select>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+  <ion-card margin-bottom padding-bottom class="x-small">
+    <ion-row no-padding>
+      <ion-col col-2>
+        <ion-icon name="home" margin-left></ion-icon>
+      </ion-col>
+      <ion-col no-padding class="medium light">
+        <b>Delivery Details</b>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-2></ion-col>
+      <ion-col no-padding>
+        <b class="x-small light">Contact Name:</b>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-2></ion-col>
+      <ion-col no-padding class="x-small light">asha</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-2></ion-col>
+      <ion-col no-padding>
+        <b class="x-small light">Address:</b>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-2></ion-col>
+      <ion-col no-padding class="xx-small light">Jaya Nagar</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-2></ion-col>
+      <ion-col no-padding class="xx-small light">Bangalore 509934</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-2></ion-col>
+      <ion-col no-padding class="xx-small light">
+        <b>Phone Number</b>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-2></ion-col>
+      <ion-col no-padding class="xx-small light">616515641654</ion-col>
+    </ion-row>
+  </ion-card>
+</ion-content>
+
+<ion-footer no-padding no-border>
+  <button ion-button block (click)="gotoOrderPage()" style="height:45px;">
+    <b>Submit Quote</b>
+  </button>
+</ion-footer>

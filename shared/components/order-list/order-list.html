@@ -1,0 +1,68 @@
+<ion-list *ngFor="let orders of order" no-padding detail-push no-margin>
+    <div *ngIf="orderStatus == orders.orderStatus" no-padding>
+        <ion-item no-lines no-padding no-margin class="devider"><b style="color:white">2015-02-12</b></ion-item>
+
+        <ion-item (click)="gotoOrderDetails(orders)" padding-top detail-push>
+            <ion-row>
+                <ion-col col-8 class="large light"><b>{{orders.contact?.contactName}}</b></ion-col>
+                <ion-col class="x-small light">
+                    <b float-right>{{orders.orderNumber}}</b>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col col-6 class="x-small light">{{orders.contact?.phoneNumber}}</ion-col>
+                <ion-col class="medium light">
+                    <ion-icon name="paper" class="medium"></ion-icon> {{orders.prescriptions.length}}
+                </ion-col>
+                <ion-col float-right class="x-small">
+                    <div float-right> Rs:{{orders.orderTotal}}/-</div>
+                </ion-col>
+            </ion-row>
+            <ion-row padding-bottom>
+                <ion-col col-7 class="xx-small light">{{orders.deliveryAddress?.area}}</ion-col>
+                <ion-col no-padding><b class="status border" float-right>{{orders.orderStatus}}</b></ion-col>
+            </ion-row>
+        </ion-item>
+
+        <ion-item (click)="gotoOrderDetails(orders)" padding-top detail-push>
+            <ion-row>
+                <ion-col col-8 class="large light"><b>{{orders.contact?.contactName}}</b></ion-col>
+                <ion-col class="x-small light">
+                    <div float-right><b>{{orders.orderNumber}}</b></div>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col col-6 class="x-small light">{{orders.contact?.phoneNumber}}</ion-col>
+                <ion-col class="medium light">
+                    <ion-icon name="paper" class="medium"></ion-icon> {{orders.prescriptions.length}}
+                </ion-col>
+                <ion-col float-right class="x-small">
+                    <div float-right> Rs:{{orders.orderTotal}}/-</div>
+                </ion-col>
+            </ion-row>
+            <ion-row padding-bottom>
+                <ion-col col-7 class="xx-small light">{{orders.deliveryAddress?.area}}</ion-col>
+                <ion-col no-padding><b class="status border" float-right>{{orders.orderStatus}}</b></ion-col>
+            </ion-row>
+        </ion-item>
+
+        <!--<ion-row *ngIf="orderStatus == 'confirmed'">
+            <button ion-button class="button-center" (click)="gotoOrderList(orderStatus)">Prepared</button>
+        </ion-row>
+        <ion-row *ngIf="orderStatus == 'prepared'" padding-bottom>
+            <button ion-button class="button-half" (click)="gotoPreparedOrdersPage('confirmed')">Unprepared</button>
+            <button ion-button class="button-half" (click)="gotoOrderList(orderStatus)">Out For Delivery</button></ion-row>
+        <ion-row *ngIf="orderStatus == 'outForDelivery'" padding-bottom margin-bottom>
+            <ion-col> <button ion-button class="button-small" (click)="gotoPreparedOrdersPage('prepared')">Not sent</button></ion-col>
+            <ion-col> <button ion-button class="button-small" (click)="gotoOrderList(orderStatus)">Deliver</button></ion-col>
+            <ion-col> <button ion-button class="button-small" (click)="gotoOrderList(orderStatus)">Locate</button></ion-col>
+        </ion-row>
+        <ion-row *ngIf="orderStatus == 'delivered'" padding-bottom margin-bottom>
+            <ion-col> <button ion-button class="button-half" (click)="gotoPreparedOrdersPage('outForDelivery')">Undeliver</button>
+                <button ion-button class="button-half" (click)="gotoOrderList(orderStatus)">Delivered</button></ion-col>
+        </ion-row>
+        <ion-row *ngIf="orderStatus == 'rejected'" padding-bottom margin-bottom>
+            <ion-col> <button ion-button class="button-center" (click)="gotoPreparedOrdersPage('new')">Undo</button></ion-col>
+        </ion-row>-->
+    </div>
+</ion-list>

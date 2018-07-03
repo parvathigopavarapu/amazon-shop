@@ -1,0 +1,67 @@
+<ion-content>
+    <ion-icon padding-right name="close" float-right (click)="cancel()"></ion-icon>
+    <ion-item class="div1" no-padding>
+        <ion-label class="medium" class="label-1"> Filter By</ion-label>
+    </ion-item>
+
+    <ion-item no-padding no-margin>
+        <ion-label class="medium">Phone Number</ion-label>
+        <ion-input type="text" [(ngModel)]="phoneNumber" placeholder="9632474696"></ion-input>
+    </ion-item>
+
+    <ion-item no-padding no-margin>
+        <ion-label class="medium">Order Number</ion-label>
+        <ion-input type="text" [(ngModel)]="orderNumber" placeholder="345ML2"></ion-input>
+    </ion-item>
+
+    <ion-item no-padding no-margin>
+        <ion-label class="medium">Patient Name</ion-label>
+        <ion-input type="title" [(ngModel)]="name" placeholder="Asha"></ion-input>
+    </ion-item>
+
+    <ion-item no-padding no-margin>
+        <ion-label class="medium">Created Start Date</ion-label>
+        <ion-datetime [(ngModel)]="startDate" displayFormat="DD-MM-YYYY" placeholder="27/11/2017"></ion-datetime>
+    </ion-item>
+
+    <ion-item no-padding no-margin>
+        <ion-label class="medium">Created End Date</ion-label>
+        <ion-datetime [(ngModel)]="endDate" displayFormat="DD-MM-YYYY" placeholder="28/11/2017"></ion-datetime>
+    </ion-item>
+
+    <ion-item class="div1" no-padding>
+        <ion-label class="medium" class="label-1"> Sort By</ion-label>
+    </ion-item>
+
+    <ion-item no-padding no-margin>
+        <ion-label class="medium">Sort By</ion-label>
+        <ion-select interface="action-sheet">
+            <ion-option>By Name </ion-option>
+            <ion-option> Ascending Date</ion-option>
+            <ion-option> Descending Date</ion-option>
+            <ion-option>Price Low to High</ion-option>
+            <ion-option>Price High to Low</ion-option>
+        </ion-select>
+    </ion-item>
+
+    <ion-grid>
+        <ion-row>
+            <ion-col></ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col></ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col></ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col></ion-col>
+        </ion-row>
+        <button ion-button (click)='reset()' class="button-full" margin-top>Reset</button>
+    </ion-grid>
+</ion-content>
+
+<ion-footer no-border no-padding>
+    <button ion-button (click)="cancel()" class="button-half">Cancel</button>
+    <button ion-button (click)="apply(orderNumber,name,startDate,endDate,phoneNumber)" class="button-half">Apply</button>
+</ion-footer>

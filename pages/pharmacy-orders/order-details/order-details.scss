@@ -1,0 +1,24 @@
+page-order-details {
+  .image {
+    width: 50px;
+    height: 50px;
+  }
+  .item {
+    background: none !important
+  }
+  .text {
+    text-align: right;
+  }
+  .scroll-content {
+    overflow-y: scroll;
+    margin-top: 56px !important;
+    margin-bottom: 0px !important;
+  }
+  .color {
+    color: map-get($colors, dark) !important;
+  }
+}
+
+ion-app.md [padding-top] {
+  padding-top: 10px !important;
+}

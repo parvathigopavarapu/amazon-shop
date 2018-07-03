@@ -1,0 +1,90 @@
+<ion-row>
+  <img src="../assets/imgs/person.png" alt="your image" class="div-circle" no-margin>
+<ion-icon name = "camera" (click) = "uploadPhoto()" style="margin-left:-20px;margin-top:55px"></ion-icon>
+</ion-row>
+
+<ion-row no-margin no-padding>
+  <ion-col col-1></ion-col>
+  <ion-col col-1 no-margin no-padding no-margin>
+    <ion-icon name="person" no-margin no-padding></ion-icon>
+  </ion-col>
+  <ion-col no-margin no-padding>
+    <ion-label margin-left margin-top no-margin no-padding class="label-a medium">
+     {{profile.firstName}} {{profile.lastName}} 
+    </ion-label>
+  </ion-col>
+</ion-row>
+
+<ion-row no-margin no-padding>
+  <ion-col col-1 no-paddding no-margin></ion-col>
+  <ion-col col-1 no-margin no-padding>
+    <ion-icon name="call" no-margin no-padding></ion-icon>
+  </ion-col>
+  <ion-col no-padding>
+    <ion-label no-margin margin-left class="label-a small">Phone</ion-label>
+  </ion-col>
+</ion-row>
+
+<ion-row no-margin no-padding>
+  <ion-col col-1></ion-col>
+  <ion-col col-1> </ion-col>
+  <ion-col no-margin no-padding>
+    <ion-label no-margin margin-left class="x-small">{{profile.phone}}</ion-label>
+  </ion-col>
+</ion-row>
+
+<ion-row no-margin no-padding>
+  <ion-col col-1 no-paddding no-margin></ion-col>
+  <ion-col col-1 no-margin no-padding>
+    <ion-icon name="mail" no-margin no-padding></ion-icon>
+  </ion-col>
+  <ion-col no-padding>
+    <ion-label no-margin margin-left class="label-a small">Email</ion-label>
+  </ion-col>
+</ion-row>
+
+<ion-row no-margin no-padding>
+  <ion-col col-1></ion-col>
+  <ion-col col-1></ion-col>
+  <ion-col no-margin no-padding>
+    <ion-label no-margin margin-left no-margin no-padding class="x-small">{{profile.email}}</ion-label>
+  </ion-col>
+</ion-row>
+
+<ion-row no-margin no-padding>
+  <ion-col col-1 no-paddding no-margin></ion-col>
+  <ion-col col-1 no-margin no-padding>
+    <ion-icon name="md-calendar" no-margin no-padding></ion-icon>
+  </ion-col>
+  <ion-col no-padding>
+    <ion-label no-margin margin-left class="label-a small">Date Of Birth</ion-label>
+  </ion-col>
+</ion-row>
+
+<ion-row no-margin no-padding>
+  <ion-col col-1></ion-col>
+  <ion-col col-1> </ion-col>
+  <ion-col no-margin no-padding>
+    <ion-label no-margin margin-left class="x-small">{{profile.dateOfBirth | date}}</ion-label>
+  </ion-col>
+</ion-row>
+
+<ion-row no-margin no-padding>
+  <ion-col col-1 no-paddding no-margin></ion-col>
+  <ion-col col-1 no-margin no-padding>
+    <ion-icon name="locate" no-margin no-padding></ion-icon>
+  </ion-col>
+  <ion-col no-padding>
+    <ion-label no-margin margin-left class="label-a small">Address</ion-label>
+  </ion-col>
+</ion-row>
+
+<ion-row no-margin no-padding>
+  <ion-col col-1 no-margin no-padding></ion-col>
+  <ion-col col-1 no-margin no-padding></ion-col>
+  <ion-col no-margin no-padding>
+    <ion-label no-margin margin-left class="x-small" text-wrap>{{profile.address?.addressName}}, {{profile.address?.address}}, {{profile.address?.area}},
+      {{profile.address?.city}}, {{profile.address?.state}}, {{profile.address?.country}}, {{profile.address?.pincode}}
+    </ion-label>
+  </ion-col>
+</ion-row>

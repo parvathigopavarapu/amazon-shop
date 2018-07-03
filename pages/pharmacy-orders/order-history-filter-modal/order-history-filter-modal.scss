@@ -1,0 +1,25 @@
+page-filterPageModal {
+  .input {
+    border: none;
+  }
+  .datetime {
+    border: none;
+  }
+  .select {
+    border: none;
+  }
+  .div1 {
+    background: map-get($colors, light-gray);
+    height: 6%;
+    width: 100%;
+  }
+  .label {
+    font-weight: bold;
+    margin: 13px !important;
+  }
+  .label-1 {
+    color: map-get($colors, white-a);
+    font-weight: bold;
+    vertical-align: middle !important;
+  }
+}

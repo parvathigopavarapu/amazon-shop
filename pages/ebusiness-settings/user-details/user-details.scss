@@ -1,0 +1,43 @@
+page-user-details {
+  .div2 {
+    margin-top: 10%;
+    margin-left: 76%;
+    width: 55px;
+    height: 55px;
+    position: fixed;
+    border-radius: 100%;
+    background: $app-background;
+  }
+  .icon2 {
+    color: map-get($colors, primary);
+    padding-left: 17px;
+    padding-top: 10px;
+    font-size: 35px;
+  }
+  .div-circle {
+    width: 30%;
+    height: 25%;
+    border-radius: 50%;
+    margin-left: 35%;
+    margin-top: 5%;
+    background-color: map-get($colors, primary);
+  }
+  .label-a {
+    color: map-get($colors, primary);
+  }
+  .icon {
+    font-size: 30px;
+  }
+  .label-md {
+    margin: 5px !important;
+  }
+  .label-wp {
+    margin: 5px !important;
+  }
+  .label-ios {
+    margin: 5px !important;
+  }
+  .scroll-content {
+    overflow-y: scroll;
+  }
+}

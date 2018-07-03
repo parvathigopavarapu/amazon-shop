@@ -1,0 +1,15 @@
+<ion-header>
+    <header-main [title]='title'></header-main>
+</ion-header>
+
+<ion-content>
+   <deliveryzone-form [deliveryZone] = 'deliveryZone'></deliveryzone-form>
+    <ion-footer no-border>
+        <ion-row class="div3">
+            <ion-col col-6>
+                <button ion-button (click)="update()">UPDATE</button></ion-col>
+            <ion-col col-6>
+                <button ion-button (click)="dismiss()">CANCEL</button></ion-col>
+        </ion-row>
+    </ion-footer>
+</ion-content>

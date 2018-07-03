@@ -1,0 +1,41 @@
+page-deliveryzones {
+  .even {
+    background: map-get($colors, vibrant);
+    color: map-get($colors, primary);
+    ;
+  }
+  .odd {
+    background: map-get($colors, white-a);
+    color: map-get($colors, primary);
+    ;
+  }
+  .header2 {
+    font-weight: bold;
+    background: map-get($colors, primary);
+    color: map-get($colors, white-x);
+  }
+  .row {
+    margin-top: 1px;
+    margin-bottom: -5px;
+    padding-bottom: 4%;
+    text-align: center;
+    align-content: center;
+  }
+  [col-3] {
+    text-align: left;
+  }
+  [col-2] {
+    text-align: left;
+  }
+  .icon-small {
+    font-size: 20px !important;
+    color: map-get($colors, primary) !important;
+  }
+  .sliding_btn {
+    background: map-get($colors, primary);
+    font-size: small;
+    color: map-get($colors, primary) !important;
+    border: 1px solid map-get($colors, primary) !important;
+    width: 60px !important;
+  }
+}

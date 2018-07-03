@@ -1,0 +1,941 @@
+// http://ionicframework.com/docs/theming/
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+.content {
+  background-color: map-get($colors, vibrant);
+}
+
+h5 {
+  color: map-get($colors, primary);
+  margin-left: 5%; // text-align: center;
+}
+
+.footer {
+  bottom: 0px !important;
+}
+
+.select-md {
+  width: 90%;
+  border-radius: 5px;
+  border: 1px solid map-get($colors, primary);
+  height: 40px;
+  max-width: 100% !important;
+  margin-left: 5% !important;
+}
+
+.select-wp {
+  width: 90%;
+  border-radius: 5px;
+  border: 1px solid map-get($colors, primary);
+  height: 40px;
+  max-width: 100% !important;
+  margin-left: 5% !important;
+}
+
+.select-ios {
+  width: 90%;
+  border-radius: 5px;
+  border: 1px solid map-get($colors, primary);
+  height: 40px;
+  max-width: 100% !important;
+  margin-left: 5% !important;
+}
+
+ion-input {
+  border: 1px solid map-get($colors, primary);
+  height: 40px;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  border-radius: 5px;
+}
+
+.label-md {
+  margin: 13px 8px 0px 5% !important;
+  color: map-get($colors, dark);
+}
+
+.label-wp {
+  margin: 13px 8px 0px 5% !important;
+  color: map-get($colors, dark);
+}
+
+.label-ios {
+  margin: 13px 8px 0px 5% !important;
+  color: map-get($colors, dark);
+}
+
+.label-wp {
+  margin: 13px 8px 0px 5% !important;
+  color: map-get($colors, dark);
+}
+
+.select-text {
+  overflow: visible;
+}
+
+.datetime-md {
+  width: 90%;
+  .select-ios {
+    width: 93%;
+    border: 1px solid map-get($colors, primary);
+    height: 40px;
+    max-width: 100% !important;
+    margin-left: 5% !important;
+    border-radius: 5px;
+    margin-left: 5% !important;
+  }
+  .datetime-wp {
+    width: 90%;
+    border: 1px solid map-get($colors, primary);
+    height: 40px;
+    max-width: 100% !important;
+    margin-left: 5% !important;
+    border-radius: 5px;
+  }
+  .datetime-ios {
+    width: 90%;
+    border: 1px solid map-get($colors, primary);
+    height: 40px;
+    max-width: 100% !important;
+    margin-left: 5% !important;
+    border-radius: 5px;
+  }
+  .datetime-wp {
+    width: 90%;
+    border: 1px solid map-get($colors, primary);
+    height: 40px;
+    max-width: 100% !important;
+    margin-left: 5% !important;
+    border-radius: 5px;
+  }
+  .fab-button {
+    color: map-get($colors, white-a) !important;
+    font-weight: bold;
+    font-size: 30px;
+  }
+  .fab ion-icon {
+    color: map-get($colors, white-a) !important;
+  }
+  ion-textarea {
+    width: 90%;
+    border: 1px solid map-get($colors, primary);
+    height: 60px;
+    max-width: 90% !important;
+    margin-left: 5% !important;
+    border-radius: 5px;
+  }
+  .toolbar-title-md {
+    overflow: visible;
+  }
+  .segment-wp .segment-button {
+    height: 4rem;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 4rem;
+    text-transform: uppercase;
+    color: map-get($colors, black-a) !important;
+    background-color: transparent;
+    opacity: 0.5;
+    padding: 0 25px !important;
+  }
+  .toolbar-title-ios {
+    overflow: visible;
+  }
+  .text-input-wp {
+    margin: 13px 8px;
+    padding: 0 8px; // width: calc(100% - 8px - 8px);
+    border: 0px !important;
+    line-height: 0rem;
+  }
+  text-transform: none;
+  font-size: 24px;
+}
+
+.text-input-ios {
+  margin: 11px 8px 11px 5px;
+  padding: 0;
+  width: calc(100% - 8px);
+}
+
+.text-input-wp {
+  margin: 11px 8px 8px 5px;
+  width: calc(100% - 8px);
+  border: 0px;
+  padding: 0;
+}
+
+//start page title
+.title-top {
+  color: map-get($colors, primary);
+  font-family: snap ITC;
+  font-size: 40px;
+  text-align: center;
+}
+
+//full length button
+.button-full {
+  width: 100%;
+  border-radius: 5px;
+  height: 45px;
+  text-transform: none !important;
+  font-weight: normal;
+}
+
+hr {
+  border-top: 2px solid map-get($colors, primary);
+  margin-left: -16px
+}
+
+//three button in a line
+.button-small {
+  width: 96%;
+  margin-left: 2% !important;
+  border-radius: 5px;
+  height: 35px;
+  text-transform: none !important;
+  font-size: 16px !important;
+  font-weight: normal;
+}
+
+.button-half {
+  width: 45%;
+  margin-left: 3% !important;
+  border-radius: 5px;
+  height: 35px !important;
+  text-transform: none !important;
+  font-size: 16px !important;
+  font-weight: normal;
+}
+
+.button-center {
+  width: 50%;
+  margin-left: 25% !important;
+  border-radius: 5px;
+  height: 35px !important;
+  font-weight: bold;
+  background-color: map-get($colors, primary);
+  text-transform: none !important;
+  font-size: 16px !important;
+  font-weight: normal;
+}
+
+.toolbar-background {
+  background: $app-background;
+}
+
+.subTitle {
+  background: map-get($colors, dark-x);
+  font-size: 16px;
+  width: 100%;
+  min-height: 40px;
+  text-align: center;
+  color: black !important;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.devider {
+  background: #bbbbbb;
+  font-size: 16px;
+  width: 100%;
+  min-height: 40px;
+  text-align: center;
+  color: map-get($colors, white-a) !important !important;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.label-small {
+  color: map-get($colors, primary);
+  font-size: 16px;
+}
+
+.searchbar-md .searchbar-input {
+  border-radius: 100px;
+  border-color: 1px solid map-get($colors, primary);
+  width: 90%;
+  margin-left: 5%;
+}
+
+.searchbar-wp .searchbar-input {
+  border-radius: 100px;
+  border-color: 1px solid map-get($colors, primary);
+  width: 90%;
+  margin-left: 5%;
+}
+
+.searchbar-ios .searchbar-input {
+  border-radius: 100px;
+  width: 90%;
+  margin-left: 5%;
+  border-color: 1px solid map-get($colors, primary);
+}
+
+.searchbar-wp .searchbar-input {
+  border-radius: 100px;
+  width: 90%;
+  margin-left: 5%;
+  border-color: 1px solid map-get($colors, primary);
+}
+
+.searchbar-md .searchbar-search-icon,
+.searchbar-md .searchbar-md-cancel {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  margin-left: 5% !important;
+}
+
+.searchbar-wp .searchbar-search-icon,
+.searchbar-wp .searchbar-wp-cancel {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  margin-left: 5% !important;
+}
+
+.searchbar-ios .searchbar-search-icon,
+.searchbar-ios .searchbar-ios-cancel {
+  position: absolute;
+  background-repeat: no-repeat; //  background-size: 20px;
+  margin-left: 5% !important;
+}
+
+.button-add {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  font-weight: normal; // background:map-get($colors,primary);
+  float: right;
+  bottom: 70px !important;
+  right: 20px !important;
+  position: fixed;
+  background: $app-background;
+}
+
+.icon-add {
+  color: map-get($colors, white-a) !important !important;
+  padding-left: 14px;
+  padding-top: 5px;
+  font-size: 30px;
+  margin: 0px !important;
+  font-weight: bold;
+}
+
+.card-content {
+  color: map-get($colors, primary) !important;
+  font-size: 15px !important;
+}
+
+.scroll-content {
+  overflow: auto;
+}
+
+::-webkit-scrollbar {
+  width: 0.2em;
+}
+
+.div-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 2%;
+  border: 1px solid map-get($colors, dark)
+}
+
+.row {
+  align-items: center !important;
+}
+
+.icon-small {
+  font-size: 20px !important;
+  color: #666666;
+}
+
+.icon-white {
+  font-size: 20px;
+  color: map-get($colors, white-a) !important;
+}
+
+.back-button-icon-md {
+  font-weight: bold;
+  font-size: 35px !important;
+}
+
+.back-button-icon-wp {
+  font-weight: bold;
+  font-size: 35px !important;
+}
+
+.back-button-icon-ios {
+  font-weight: bold;
+  font-size: 35px !important;
+}
+
+.back-button-icon-wp {
+  font-weight: bold;
+  font-size: 35px !important;
+}
+
+.badge {
+  background-color: map-get($colors, primary);
+  color: map-get($colors, white-a) !important;
+  border-radius: 100%;
+}
+
+.alert-sub-title {
+  color: map-get($colors, primary)
+}
+
+.item-md[detail-push] .item-inner,
+button.item-md:not([detail-none]) .item-inner,
+a.item-md:not([detail-none]) .item-inner {
+  background-repeat: no-repeat;
+  background-size: 22px 22px;
+  background-position: right;
+}
+
+.item-wp[detail-push] .item-inner,
+button.item-wp:not([detail-none]) .item-inner,
+a.item-wp:not([detail-none]) .item-inner {
+  background-repeat: no-repeat;
+  background-size: 22px 22px;
+  background-position: right;
+}
+
+.item-ios[detail-push] .item-inner,
+button.item-ios:not([detail-none]) .item-inner,
+a.item-ios:not([detail-none]) .item-inner {
+  background-repeat: no-repeat;
+  background-size: 22px 22px;
+  padding-left: 5px !important;
+  background-position: right;
+}
+
+.tabs-md[tabsLayout=icon-top] .has-icon .tab-button-text {
+  margin-top: 4px;
+  margin-bottom: 0;
+  overflow: visible;
+  font-size: 10px;
+}
+
+.tabs-wp[tabsLayout=icon-top] .has-icon .tab-button-text {
+  margin-top: 4px;
+  margin-bottom: 0;
+  overflow: visible;
+  font-size: 10px;
+}
+
+.tabs-ios[tabsLayout=icon-top] .has-icon .tab-button-text {
+  margin-top: 4px;
+  margin-bottom: 0;
+  overflow: visible;
+  font-size: 10px;
+}
+
+.tabs-wp[tabsLayout=icon-top] .has-icon .tab-button-text {
+  margin-top: 4px;
+  margin-bottom: 0;
+  overflow: visible;
+  font-size: 10px;
+}
+
+md {
+  margin: 0 0.2rem;
+  padding: 0 5px;
+  border-radius: 2px;
+  height: 32px;
+  border: 0;
+  font-size: 35px !important;
+  font-weight: 500;
+}
+
+.bar-button-wp {
+  margin: 0 0.2rem;
+  padding: 0 5px;
+  border-radius: 2px;
+  height: 32px;
+  border: 0;
+  font-size: 35px !important;
+  font-weight: 500;
+}
+
+.bar-button-ios {
+  margin: 0 0.2rem;
+  padding: 0 5px;
+  border-radius: 2px;
+  height: 32px;
+  border: 0;
+  font-size: 35px;
+  font-weight: 500;
+}
+
+.bar-button-wp {
+  margin: 0 0.2rem;
+  padding: 0 5px;
+  border-radius: 2px;
+  height: 32px;
+  border: 0;
+  font-size: 35px;
+  font-weight: 500;
+}
+
+.button-md {
+  text-transform: none;
+  border-radius: 5px;
+  background: map-get($colors, primary);
+  font-weight: normal;
+}
+
+.button-wp {
+  text-transform: none;
+  border-radius: 5px;
+  background: $app-background;
+  font-weight: normal;
+}
+
+.button-ios {
+  text-transform: none;
+  border-radius: 5px;
+  background: $app-background;
+  font-weight: normal;
+}
+
+.button-footer {
+  width: 100% !important;
+  text-transform: none;
+  height: 45px;
+  border-radius: 0px;
+  margin: 0px !important;
+  bottom: 0px !important;
+  border-radius: 0px !important;
+}
+
+.tabs-wp[tabsPlacement=bottom] .tab-button[aria-selected=true] {
+  border: 0px;
+  border-color: none;
+}
+
+.button-ios {
+  border-radius: 4px;
+  height: 2.8em;
+  font-size: 1.6rem;
+  color: map-get($colors, white-a) !important;
+  background-color: map-get($colors, primary);
+  margin: 0rem;
+  padding: 0 1em;
+}
+
+ion-header ion-icon.back-button-icon.icon,
+ion-header span.back-button-text.back-button-text {
+  color: map-get($colors, white-a) !important;
+}
+
+.item-md ion-icon[item-left]+.item-inner,
+.item-md ion-icon[item-left]+.item-input,
+.item-md ion-icon[item-start]+.item-inner,
+.item-md ion-icon[item-start]+.item-input {
+  margin-left: 0px !important;
+}
+
+.item-ios ion-icon[item-left]+.item-inner,
+.item-md ion-icon[item-left]+.item-input,
+.item-md ion-icon[item-start]+.item-inner,
+.item-md ion-icon[item-start]+.item-input {
+  margin-left: 0px !important;
+}
+
+.item-wp ion-icon[item-left]+.item-inner,
+.item-md ion-icon[item-left]+.item-input,
+.item-md ion-icon[item-start]+.item-inner,
+.item-md ion-icon[item-start]+.item-input {
+  margin-left: 0px !important;
+}
+
+.item-md ion-icon[item-left] {
+  margin-top: 17px;
+}
+
+.item-ios ion-icon[item-left] {
+  margin-top: 17px;
+}
+
+.item-wp ion-icon[item-left] {
+  margin-top: 17px;
+}
+
+@media only screen and (min-width: 400px) {
+  .tabs-md[tabsLayout=icon-top] .has-icon .tab-button-text {
+    margin-top: 4px;
+    margin-bottom: 0;
+    overflow: visible;
+    font-size: 14px;
+  }
+  .tabs-ios[tabsLayout=icon-top] .has-icon .tab-button-text {
+    margin-top: 4px;
+    margin-bottom: 0;
+    overflow: visible;
+    font-size: 14px;
+  }
+  .toolbar-title-md {
+    font-size: 24px;
+    color: map-get($colors, white-a) !important;
+    text-align: center;
+    font-weight: bold;
+    overflow: visible;
+  }
+  .toolbar-title-ios {
+    font-size: 24px;
+    color: map-get($colors, white-a) !important;
+    text-align: center;
+    font-weight: bold;
+    overflow: visible;
+  }
+  ion-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 90px 1px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+}
+
+.title-md {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  height: 100%;
+  width: 70%;
+  text-align: center;
+  transform: translateX(-50%);
+}
+
+.title-wp {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  height: 100%;
+  width: 70%;
+  text-align: center;
+  transform: translateX(-50%);
+}
+
+.content {
+  color: map-get($colors, primary);
+}
+
+.item-input-has-focus .input-cover,
+.input-has-focus .input-cover {
+  touch-action: none;
+  display: none;
+}
+
+.item-textarea-has-focus .textarea-cover,
+.textarea-has-focus .textarea-cover {
+  touch-action: none;
+  display: none;
+}
+
+.item-md.item-block .item-inner {
+  width: 90%;
+  border-bottom: 1px solid #dedede;
+}
+
+.item-wp.item-block .item-inner {
+  width: 90%;
+  border-bottom: 1px solid #dedede;
+}
+
+.item-ios.item-block .item-inner {
+  width: 90%;
+  border-bottom: 1px solid #dedede;
+}
+
+.item-wp.item-block .item-inner {
+  width: 90%;
+  border-bottom: 1px solid #dedede;
+}
+
+ion-fab[bottom] {
+  bottom: 35px !important
+}
+
+ion-fab[right] {
+  bottom: 35px !important;
+}
+
+.fab ion-icon {
+  color: map-get($colors, white-a) !important;
+}
+
+.alert-md .alert-title {
+  font-size: 22px;
+  text-align: center;
+  font-weight: bold;
+  color: map-get($colors, primary);
+}
+
+.alert-wp .alert-title {
+  font-size: 22px;
+  text-align: center;
+  font-weight: bold;
+  color: map-get($colors, primary);
+}
+
+.alert-ios .alert-title {
+  font-size: 22px;
+  text-align: center;
+  font-weight: bold;
+  color: map-get($colors, primary);
+}
+
+.alert-wp .alert-title {
+  font-size: 22px;
+  text-align: center;
+  font-weight: bold;
+  color: map-get($colors, primary);
+}
+
+ion-label {
+  overflow: visible;
+}
+
+.alert-title {
+  color: map-get($colors, primary);
+  text-align: center;
+}
+
+.alert-sub-title {
+  text-align: center;
+}
+
+.action-sheet-md .action-sheet-title {
+  text-align: left;
+  text-align: center;
+  font-size: 20px;
+  color: map-get($colors, primary);
+  font-weight: bold;
+}
+
+.action-sheet-wp .action-sheet-title {
+  text-align: left;
+  text-align: center;
+  font-size: 20px;
+  color: map-get($colors, primary);
+  font-weight: bold;
+}
+
+.action-sheet-ios .action-sheet-icon {
+  padding: 0;
+  text-align: center;
+  width: 2.3rem;
+  font-size: 30px;
+  vertical-align: middle;
+  margin: 0 32px 0 0;
+}
+
+.action-sheet-wp .action-sheet-icon {
+  padding: 0;
+  text-align: center;
+  width: 2.3rem;
+  font-size: 30px;
+  vertical-align: middle;
+  margin: 0 32px 0 0;
+}
+
+.bar-button-ios {
+  margin: 0 0.2rem;
+  padding: 0 5px;
+  border-radius: 2px;
+  height: 32px;
+  border: 0;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.bar-button-wp {
+  margin: 0 0.2rem;
+  padding: 0 5px;
+  border-radius: 2px;
+  height: 32px;
+  border: 0;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+textarea.text-input {
+  display: block;
+  margin-left: 5%;
+  border: 1px solid map-get($colors, primary);
+  width: 90%;
+  height: 70px;
+  border-radius: 5px;
+}
+
+.action-sheet-ios .action-sheet-title {
+  text-align: left;
+  text-align: center;
+  font-size: 20px;
+  color: map-get($colors, primary);
+  font-weight: bold;
+}
+
+.action-sheet-ios .action-sheet-icon {
+  padding: 0;
+  text-align: center;
+  width: 2.3rem;
+  font-size: 30px;
+  vertical-align: middle;
+  margin: 0 32px 0 0;
+}
+
+.card-ios {
+  margin: 10px;
+  border-radius: 2px;
+  width: calc(100% - 20px);
+  font-size: 1.4rem;
+  background: map-get($colors, white-a) !important;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.card-md {
+  font-size: 1.5rem;
+}
+
+.card-wp {
+  font-size: 1.5rem;
+}
+
+.card-ios {
+  font-size: 1.5rem;
+}
+
+.xx-large {
+  font-size: 22px !important;
+  color: map-get($colors, primary);
+}
+
+.large {
+  font-size: 18px !important;
+}
+
+.medium {
+  font-size: 16px !important;
+}
+
+.small {
+  font-size: 15px !important;
+}
+
+.x-small {
+  font-size: 14px !important;
+}
+
+.xx-small {
+  font-size: 12px !important;
+  color: #999999 !important;
+}
+
+.black {
+  color: map-get($colors, black-a) !important;
+}
+
+.light {
+  color: #666666;
+}
+
+.status_color {
+  color: #ff4400;
+}
+
+.toolbar-title-wp {
+  font-size: 24px;
+  color: map-get($colors, primary);
+  text-align: center;
+  font-weight: bold;
+  overflow: visible;
+  text-transform: none;
+}
+
+.toolbar-wp {
+  text-align: center;
+  vertical-align: middle;
+  min-height: 56px;
+}
+
+.text-input-wp {
+  border: 0px;
+  padding: 0px;
+  margin: 0 0 0 16px !important;
+}
+
+.datetime-md {
+  width: 90%;
+  text-transform: none;
+  font-size: 24px;
+  border: 1px solid map-get($colors, primary);
+  margin-left: 5%;
+  height: 40px !important;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.datetime-ios {
+  width: 90%;
+  text-transform: none;
+  font-size: 24px;
+  border: 1px solid map-get($colors, primary);
+  margin-left: 5%;
+  height: 40px !important;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.datetime-wp {
+  width: 90%;
+  text-transform: none;
+  font-size: 24px;
+  border: 1px solid map-get($colors, primary);
+  margin-left: 5%;
+  height: 40px !important;
+  border-radius: 5px;
+  font-size: 15px;
+  padding: 3px;
+}
+
+.datetime-wp .datetime-text {
+  border: 0px;
+}
+
+.segment-wp .segment-button {
+  width: 50%;
+}
+
+.fab-md-in-list {
+  // background-color:$app-background!important;
+  color: map-get($colors, white-a) !important;
+  width: 100%;
+}
+
+.fab-md {
+  background: $app-background;
+}
+
+.toolbar-title {
+  overflow: visible;
+}

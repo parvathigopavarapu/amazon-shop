@@ -1,0 +1,22 @@
+page-order-details-modal {
+  .input {
+    border: 0px;
+  }
+  .select {
+    border: 0px;
+  }
+  .label {
+    font-size: 14px;
+  }
+  .scroll-content {
+    overflow-y: auto;
+    margin-top: 56px !important;
+    margin-bottom: 0px !important;
+  }
+  .div-a {
+    border: 1px solid map-get($colors, primary);
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-top: 8%;
+  }
+}

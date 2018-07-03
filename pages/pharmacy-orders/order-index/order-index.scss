@@ -1,0 +1,73 @@
+page-order-index {
+  .background {
+    background-color: whitesm;
+    border: 1px solid map-get($colors, dark-x);
+    border-radius: 5px;
+    padding: 2px;
+    text-align: center;
+    height: 100px;
+    color: #666666;
+    font-size: 14px;
+    font-weight: normal;
+  }
+  ion-badge {
+    padding: 3px 8px;
+    text-align: center;
+    display: inline-block;
+    min-width: 10px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    line-height: 1;
+    white-space: nowrap;
+    vertical-align: baseline;
+    margin-top: 20px !important;
+    position: fixed;
+    margin-left: 30px !important;
+  }
+  .badge {
+    background-color: map-get($colors, light-gray);
+    color: map-get($colors, white-a);
+    border-radius: 100%;
+  }
+  .icon {
+    color: $app-background !important;
+    font-size: 35px !important;
+    margin-top: 20px;
+    padding: 0px;
+  }
+  .row {
+    align-items: center !important;
+    vertical-align: middle !important;
+  }
+  .item-md {
+    padding-left: 0px;
+    margin: 0;
+  }
+  .item-md [item-left],
+  .item-md [item-right],
+  .item-md [item-start],
+  .item-md [item-end] {
+    margin: 0;
+  }
+  .item-ios [item-left],
+  .item-ios [item-right],
+  .item-ios [item-start],
+  .item-ios [item-end] {
+    margin: 0;
+  }
+  .scroll-content {
+    overflow: hidden !important;
+  }
+  .label-md {
+    margin: 0px !important;
+  }
+  .label-ios {
+    margin: 0px !important;
+  }
+  .label-wp {
+    margin: 0px !important;
+  }
+  ion-col[col-6]:hover {
+    background-color: map-get($colors, dark-x) !important;
+  }
+}

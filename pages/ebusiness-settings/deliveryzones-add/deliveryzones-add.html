@@ -1,0 +1,11 @@
+<ion-header>
+    <header-main [title]='title'></header-main>
+</ion-header>
+
+<ion-content>
+    <deliveryzone-form [deliveryZone] = 'deliveryZone'></deliveryzone-form>
+    <ion-footer no-border>
+        <button ion-button (click)="add()" class="button-half">ADD</button>
+        <button ion-button (click)="dismiss()" class="button-half">CANCEL</button>
+    </ion-footer>
+</ion-content>

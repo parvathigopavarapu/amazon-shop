@@ -1,0 +1,33 @@
+page-quotation-create {
+  .border {
+    border-top: 1px solid map-get($colors, dark);
+    border-left: 1px solid map-get($colors, dark);
+  }
+  .border-bottom {
+    border-bottom: 1px solid map-get($colors, dark);
+  }
+  .border-right {
+    border-right: 1px solid map-get($colors, dark);
+  }
+  .col-a {
+    height: 50px;
+  }
+  .div2 {
+    margin-top: 30%;
+    margin-left: 76%;
+    width: 55px;
+    height: 55px;
+    position: fixed;
+    border-radius: 100%;
+    background: $app-background;
+  }
+  .icon2 {
+    color: map-get($colors, white-a);
+    padding-left: 17px;
+    padding-top: 10px;
+    font-size: 35px;
+  }
+  .input {
+    border: 0px;
+  }
+}

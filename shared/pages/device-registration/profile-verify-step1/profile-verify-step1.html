@@ -1,0 +1,34 @@
+<ion-header>
+    <header-main [title]='title'></header-main>
+</ion-header>
+
+<ion-content>
+    <ion-label style="text-align:center">
+        <b>
+            <u>Step 1 of 2 </u>
+        </b>
+    </ion-label>
+    <ion-label class="medium">
+        <b>Personal Details:</b>
+    </ion-label>
+    <ion-card>
+
+        <ion-label class="medium light">Email:</ion-label>
+        <ion-input type="text" placeholder="Email" [(ngModel)]="profileVerify.email" margin-bottom></ion-input>
+
+        <ion-label class="medium light">Date Of Birth:</ion-label>
+        <ion-input type="text" placeholder="Date of Birth" [(ngModel)]="profileVerify.dateOfBirth" margin-bottom></ion-input>
+
+        <ion-label class="medium light">Gender:</ion-label>
+        <ion-item no-lines no-padding no-margin>
+            <ion-select [(ngModel)]="profileVerify.gender" interface="action-sheet">
+                <ion-option value="female">Female</ion-option>
+                <ion-option value="male">Male</ion-option>
+            </ion-select>
+        </ion-item>
+    </ion-card>
+</ion-content>
+
+<ion-footer no-border no-padding no-margin>
+    <button ion-button class="button-footer" (click)="next()">Next</button>
+</ion-footer>

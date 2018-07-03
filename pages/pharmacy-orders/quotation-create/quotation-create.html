@@ -1,0 +1,104 @@
+<ion-header>
+    <header-main [title]='title'></header-main>
+</ion-header>
+
+<ion-content>
+    <ion-card padding-left>
+        <ion-row>
+            <ion-col col-6 class="large black"><b>{{order.contact.contactName}}</b></ion-col>
+            <ion-col col-6 class="medium black">
+                <ion-icon name="call" class="icon-small"></ion-icon>{{order.contact.phoneNumber}}
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col col-5 class="x-small light"><b>Patient Name</b></ion-col>
+            <ion-col col-1>:</ion-col>
+            <ion-col col-6 class="x-small light">{{order.contact.patient.patientName}}</ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col col-5 class="x-small light"><b>Prescriptions</b></ion-col>
+            <ion-col col-1>:</ion-col>
+            <ion-col col-3 *ngFor="let image of order.prescriptions"><img src="{{image.prescriptionImageUrl}}" style="height:50px;width:60px"></ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col col-2></ion-col>
+            <ion-col col-8><button ion-button class="button-small"><ion-icon name="call" class="icon-white" no-padding no-margin></ion-icon>Call Customer</button></ion-col>
+            <ion-col col-2></ion-col>
+        </ion-row>
+
+    </ion-card>
+
+    <ion-row margin-left margin-right>
+        <ion-col col-2 class="border x-small col-a">
+            <ion-label text-wrap>No.</ion-label>
+        </ion-col>
+        <ion-col col-3 class="border x-small col-a">
+            <ion-label text-wrap>Medicine</ion-label>
+        </ion-col>
+        <ion-col col-3 class="border x-small col-a">
+            <ion-label text-wrap>Rate/unit</ion-label>
+        </ion-col>
+        <ion-col col-2 class="border x-small col-a">
+            <ion-label text-wrap>Qty</ion-label>
+        </ion-col>
+        <ion-col col-2 class="border x-small border-right col-a">
+            <ion-label text-wrap>Total</ion-label>
+        </ion-col>
+    </ion-row>
+
+    <ion-row style="margin-top:0px!important;margin-left:16px;margin-right:16px;">
+        <ion-col col-2 class="border medium col-a">
+            <ion-label text-wrap>1.</ion-label>
+        </ion-col>
+        <ion-col col-3 class="border medium col-a">
+            <ion-label text-wrap>Dolo</ion-label>
+        </ion-col>
+        <ion-col col-3 class="border medium col-a">
+            <ion-label text-wrap>5</ion-label>
+        </ion-col>
+        <ion-col col-2 class="border medium col-a">
+            <ion-label text-wrap>10</ion-label>
+        </ion-col>
+        <ion-col col-2 class="border medium border-right col-a">
+            <ion-label text-wrap>50</ion-label>
+        </ion-col>
+    </ion-row>
+
+    <ion-row style="margin-top:0px!important;margin-left:16px;margin-right:16px;" *ngFor="let drug of drugList">
+        <ion-col col-2 class="border medium col-a">
+            <ion-input text-wrap [(ngModel)]="no"></ion-input>
+        </ion-col>
+        <ion-col col-3 class="border medium col-a">
+            <ion-input text-wrap [(ngModel)]="medicine"></ion-input>
+        </ion-col>
+        <ion-col col-3 class="border medium col-a">
+            <ion-input text-wrap [(ngModel)]="rate"></ion-input>
+        </ion-col>
+        <ion-col col-2 class="border medium col-a">
+            <ion-input text-wrap [(ngModel)]="qty"></ion-input>
+        </ion-col>
+        <ion-col col-2 class="border medium border-right col-a">
+            <ion-input text-wrap [(ngModel)]="amount"></ion-input>
+        </ion-col>
+    </ion-row>
+
+    <ion-row style="margin-top:0px!important;margin-left:16px;margin-right:16px;" class="border-bottom">
+        <ion-col class="border small" style="padding-left: 52%">
+            <ion-label>Total</ion-label>
+        </ion-col>
+        <ion-col col-4 class="border small border-right">
+            <ion-label text-wrap><b>1500</b></ion-label>
+        </ion-col>
+    </ion-row>
+    
+    <div class="div2" (click)="create(no,medicine,rate,qty,amount)" margin-top>
+        <ion-icon name="add" class="icon2"></ion-icon>
+    </div>
+
+    <ion-footer no-padding no-border>
+        <button ion-button block (click)="movetoquatationdetailspage()" class="button-full"><b>Next</b></button>
+    </ion-footer>
+</ion-content>

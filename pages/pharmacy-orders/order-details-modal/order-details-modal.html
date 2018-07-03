@@ -1,0 +1,88 @@
+<ion-header>
+  <header-main [title]='title' [logo]='logo'></header-main>
+</ion-header>
+
+<ion-content class="x-small">
+  <ion-row>
+    <ion-col col-9>
+      <ion-label>Phone:<b> 9632569856</b></ion-label>
+    </ion-col>
+    <ion-col>
+      <ion-label><b>Asha</b></ion-label>
+    </ion-col>
+  </ion-row>
+  <ion-label>Payment Mode: Cash On Delivery</ion-label>
+  <ion-label *ngIf='orderStatus != "outForDelivery"' text-wrap> The Prescription is preapared for the order number 123kg</ion-label>
+  <ion-label *ngIf='orderStatus == "outForDelivery"' text-wrap>The Prescription of order number 123kg is ready for delivery</ion-label>
+
+  <div class="div-a" padding-left>
+    <ion-row no-padding no-margin>
+      <ion-col col-5 no-padding no-margin>
+        <ion-label no-padding no-margin>Medicine(No)</ion-label>
+      </ion-col>
+      <ion-col col-3 no-padding no-margin>
+        <ion-label no-padding no-margin> Days</ion-label>
+      </ion-col>
+      <ion-col col-4 no-padding no-margin>
+        <ion-label no-padding no-margin>No.of Times</ion-label>
+      </ion-col>
+    </ion-row>
+    <hr>
+    <ion-list *ngFor='let list of prescriptionList' no-padding no-margin>
+      <ion-row no-padding no-margin>
+        <ion-col col-5 no-padding no-margin>
+          <ion-label no-padding no-margin>{{list.prescriptionName}}({{list.number}})</ion-label>
+        </ion-col>
+        <ion-col col-3 no-padding no-margin>
+          <ion-label no-padding no-margin>{{list.days}}</ion-label>
+        </ion-col>
+        <ion-col col-4 no-padding no-margin>
+          <ion-label no-padding no-margin> {{list.time}}</ion-label>
+        </ion-col>
+      </ion-row>
+    </ion-list>
+  </div>
+
+  <div *ngIf="orderStatus == 'delivered'" margin>
+    <ion-item>
+      <ion-label>Prescription(s)</ion-label>
+      <ion-select [(ngModel)]="verify" interface="action-sheet">
+        <ion-option value="verified"> Verified </ion-option>
+        <ion-option value="unverified"> Unverified </ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Payment Collected</ion-label>
+      <ion-select [(ngModel)]="collected" interface="action-sheet" no-border>
+        <ion-option value="yes"> Yes </ion-option>
+        <ion-option value="no"> No </ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item no-lines>
+      <ion-label>Collected by</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+  </div>
+
+  <ion-label style="text-align:center" margin padding>Would you like to continue?</ion-label>
+
+  <button ion-button class="button-half" *ngIf="orderStatus == 'confirmed'" (click)='gotoOrderList("prepared","Prepared Orders")'>Yes</button>
+  <button ion-button class="button-half" *ngIf="orderStatus == 'prepared'" (click)='gotoOrderList("outForDelivery","Out For Delivery Orders")'>Yes</button>
+  <button ion-button class="button-half" *ngIf="orderStatus == 'outForDelivery'" (click)='gotoOrderList("delivered"," Delivered Orders")'>Yes</button>
+  <button ion-button class="button-half" *ngIf="orderStatus != 'delivered'" (click)='gotoSamePage()'> No</button>
+  
+  <div *ngIf="verify == 'verified'">
+    <button ion-button class="button-half" *ngIf='orderStatus == "delivered"' (click)='gotoHome()'>Yes</button>
+    <button ion-button class="button-half" (click)='gotoSamePage()'> No</button>
+  </div>
+
+  <div *ngIf="verify == 'unverified'">
+    <button ion-button class="button-half" *ngIf='orderStatus == "delivered"' disabled>Yes</button>
+    <button ion-button class="button-half" (click)='gotoSamePage()'> No</button>
+  </div>
+
+  <div *ngIf="verify != 'verified' && verify != 'unverified'">
+    <button ion-button class="button-half" *ngIf='orderStatus == "delivered"' (click)='gotoHome()' disabled>Yes</button>
+    <button ion-button class="button-half" *ngIf='orderStatus == "delivered"' (click)='gotoSamePage()'> No</button>
+  </div>
+</ion-content>
